@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Grenze+Gotisch:wght@100..900&family=Rye&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Almendra:ital,wght@0,400;0,700;1,400;1,700&family=Grenze+Gotisch:wght@100..900&family=Rye&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+img {
+  max-width: 100%;
+  width: auto;
+}
+
+body {
+  margin: 0;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 12px;
+  }
+  header nav {
+    width: 100%;
+    justify-content: center;
+  }
+  header ul {
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 6px;
+    justify-content: center;
+    font-size: 1rem;
+  }
+  #home {
+    flex-direction: column;
+    text-align: center;
+    gap: 0;
+  }
+  #home .avatar {
+    width: 150px;
+    margin: 0;
+  }
+  #home p {
+    font-size: 1rem;
+  }
+  #home h1 {
+    font-size: 2rem;
+  }
+  #skills {
+    font-size: 1rem;
+    padding: 20px;
+    text-align: center;
+  }
+  #skills ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 0;
+  }
+  #skills li {
+    width: 100%;
+    justify-content: center;
+  }
+  #skills i {
+    font-size: 2rem;
+    margin-bottom: 5px;
+  }
+  #skills span {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 1200px) {
+  #projects .media {
+    grid-template-columns: repeat 2, 1fr;
+  }
+}
+@media (max-width: 800px) {
+  #projects .media {
+    grid-template-columns: 1rf;
+  }
+  #experience .expoCartel {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  #experience .expoCartel .text {
+    text-align: center;
+  }
+  #experience .expoCartel img {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  color: white;
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  font-family: "Rye", sans-serif;
+  font-size: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(10px);
+}
+header .logo {
+  flex: 0 0 auto;
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 5px;
+}
+header nav {
+  flex: 5;
+  display: flex;
+  justify-content: center;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 25px;
+}
+header nav ul a {
+  color: white;
+  text-decoration: none;
+}
+header nav:hover {
+  transform: scale(1.05);
+}
+
+body {
+  font-family: "Almendra", serif;
+  font-weight: 500;
+  font-style: normal;
+  background: linear-gradient(180deg, #fac2ef, #c6e2fc, #D4FC79, #d4abff, #adc9fb);
+  background-size: 800% 800%;
+  animation: moveBack 20s ease infinite;
+}
+@keyframes moveBack {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+body h1 {
+  font-family: "Rye", sans-serif;
+  display: flex;
+  font-size: 3.5rem;
+}
+
+main {
+  padding: 20px;
+  width: 80%;
+  margin: 0 auto;
+}
+main h2 {
+  font-family: "Rye", sans-serif;
+  display: flex;
+  justify-content: center;
+  font-size: 2.5rem;
+  margin: 0;
+}
+main section {
+  background-color: rgba(244, 244, 244, 0.7294117647);
+  padding: 20px;
+  border-radius: 50px;
+  backdrop-filter: blur(10px);
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+main #home {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px;
+}
+main #home p {
+  font-size: 1.5rem;
+  line-height: 1.5;
+  margin: 0;
+}
+main #home .fa-microscope {
+  font-size: 1rem;
+  vertical-align: middle;
+}
+main #home .fa-laptop-code {
+  font-size: 1rem;
+}
+main #home .avatar {
+  width: 250px;
+  height: auto;
+  display: flex;
+  object-fit: cover;
+  margin-left: 40px;
+}
+main #skills {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 1.5rem;
+}
+main #skills ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+main #skills li {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 120px;
+}
+main #skills i {
+  margin-bottom: 8px;
+  font-size: 3rem;
+}
+main #skills i span {
+  font-size: 0.5rem;
+  font-family: "Almendra", serif;
+}
+main #experience {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 0 auto 40px auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+main #experience p {
+  margin: 0;
+  font-size: 1.5rem;
+}
+main #experience .expoCartel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  max-width: 100%;
+  padding: 20px;
+  border-radius: 20px;
+}
+main #experience .expoCartel img {
+  width: 90%;
+  height: auto;
+  max-width: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+main #experience .expoCartel img:hover {
+  transform: scale(1.05);
+}
+main #experience .expoCartel .text {
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 0;
+  max-width: 600px;
+}
+main #experience .expoCartel .summaryLink {
+  display: inline-block;
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+}
+main #experience .expoCartel .summaryLink i {
+  margin: 0;
+}
+main #experience .expoCartel .summaryLink:hover {
+  color: black;
+  transform: scale(1.05);
+}
+main #projects {
+  text-align: center;
+  padding: 40px 20px;
+  font-size: 1.5rem;
+  margin: 0;
+}
+main #projects .media {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  justify-items: center;
+  align-items: start;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+main #projects .media p {
+  font-size: 1.2rem;
+  margin-top: 0;
+}
+main #projects .media img {
+  width: 100%;
+  height: auto;
+  max-width: 300px;
+  border-radius: 10px;
+}
+main #projects .media img:hover {
+  transform: scale(1.05);
+}
+main #projects .media video {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 10px;
+}
+main #projects .media video:hover {
+  transform: scale(1.05);
+}
+main #contact p {
+  text-align: center;
+  font-size: 1.5rem;
+}
+main #contact ul {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  gap: 0.5rem;
+}
+main #contact ul li {
+  list-style: none;
+  display: flex;
+  text-decoration: none;
+}
+main #contact ul li i {
+  color: black;
+}
+
+/*# sourceMappingURL=style.css.map */

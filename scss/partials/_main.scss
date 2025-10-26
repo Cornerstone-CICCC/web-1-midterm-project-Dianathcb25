@@ -1,0 +1,250 @@
+@use "./variables";
+@use "./header";
+@use "./footer";
+
+body {
+    font-family: variables.$fontmain;
+    font-weight: 500;
+    font-style: normal;
+
+  background: linear-gradient(180deg, #fac2ef, #c6e2fc, #D4FC79, #d4abff, #adc9fb);
+  background-size: 800% 800%;
+  animation: moveBack 20s ease infinite;
+
+@keyframes moveBack {
+  0% {
+    background-position: 50% 0%;
+  }
+  50% {
+    background-position: 50% 100%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+
+
+    h1 {
+        font-family: variables.$fonthead;
+        display: flex;
+        font-size: 3.5rem;
+    }
+}
+
+main {
+    padding: 20px;
+    width: 80%;
+    margin: 0 auto;
+
+
+    h2 {
+        font-family: variables.$fonthead;
+        display: flex;
+        justify-content: center;
+        font-size: 2.5rem;
+        margin: 0;
+    }
+
+    section {
+    background-color: #f4f4f4ba;
+    padding: 20px;
+    border-radius: 50px;
+    backdrop-filter: blur(10px);
+    margin-top: 40px;
+    margin-bottom: 40px;
+    }
+
+       #home {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 40px;
+
+          p {
+           font-size: 1.5rem;
+           line-height: 1.5;
+           margin: 0;
+          }
+
+          .fa-microscope {
+          font-size: 1rem;
+          vertical-align: middle;
+            }
+          .fa-laptop-code {
+            font-size: 1rem;
+          }
+
+          .avatar {
+            width: 250px;
+            height: auto;
+            display: flex;
+            object-fit: cover;
+            margin-left: 40px;
+          }
+        }
+
+      #skills {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        font-size: 1.5rem;
+
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 30px;
+          list-style: none;
+          padding: 0;
+          margin: 0;
+        }
+          li {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 120px;
+          }
+            i {
+              margin-bottom: 8px;
+              font-size: 3rem;
+
+          span {
+            font-size: 0.5rem;
+            font-family: variables.$fontmain;
+          }
+            }
+      }
+
+      #experience {
+        text-align: center;
+        font-size: 1.2rem;
+        margin: 0 auto 40px auto;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 10px;
+
+        p {
+          margin: 0;
+          font-size: 1.5rem;
+        }
+
+        .expoCartel {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          gap: 20px;
+          max-width: 100%;
+          padding: 20px;
+          border-radius: 20px;
+
+          img {
+            width: 90%;
+            height: auto;
+            max-width: 100%;
+            border-radius: 10px;
+            object-fit: cover;
+            &:hover {
+              transform: scale(1.05);
+            }
+          }
+
+          .text {
+            text-align: center;
+            font-size: 1.2rem;
+            margin: 0;
+            max-width: 600px;
+          }
+
+          .summaryLink {
+            display: inline-block;
+            color: black;
+            text-decoration: none;
+            font-weight: 600;
+
+            i {
+              margin: 0;
+            }
+            &:hover {
+              color: black;
+              transform: scale(1.05);
+            }
+          }
+        }
+      }
+
+      #projects {
+        text-align: center;
+        padding: 40px 20px;
+        font-size: 1.5rem;
+        margin: 0;
+
+        .media {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+          justify-items: center;
+          align-items: start;
+          margin-top: 20px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          text-align: center;
+
+          p {
+              font-size: 1.2rem;
+              margin-top: 0;
+            }
+
+          img {
+            width: 100%;
+            height: auto;
+            max-width: 300px;
+            border-radius: 10px;
+            &:hover {
+              transform: scale(1.05);
+            }
+          }
+
+          video {
+            width: 100%;
+            max-width: 300px;
+            border-radius: 10px;
+            &:hover {
+            transform: scale(1.05);
+            }
+          }
+        }
+
+      }
+
+
+      #contact {
+        p {
+          text-align: center;
+          font-size: 1.5rem;
+        }
+          ul {
+              display: flex;
+              flex-direction: row;
+              align-items: flex-start;
+              justify-content:center;
+              list-style: none;
+              padding: 0;
+              margin: 0;
+              gap: variables.$defaultPadding;
+              li {
+                  list-style: none;
+                  display: flex;
+                  text-decoration: none;
+                          i {
+                              color: black;
+                          }
+               }
+            }
+        }
+}
